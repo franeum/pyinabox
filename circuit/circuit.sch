@@ -1,0 +1,100 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Speaker LS1
+U 1 1 600EEE8B
+P 6500 3800
+F 0 "LS1" H 6670 3796 50  0000 L CNN
+F 1 "Speaker" H 6670 3705 50  0000 L CNN
+F 2 "" H 6500 3600 50  0001 C CNN
+F 3 "~" H 6490 3750 50  0001 C CNN
+	1    6500 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 600EEF3F
+P 6400 4500
+F 0 "SW1" H 6400 4785 50  0000 C CNN
+F 1 "SW_Push" H 6400 4694 50  0000 C CNN
+F 2 "" H 6400 4700 50  0001 C CNN
+F 3 "" H 6400 4700 50  0001 C CNN
+	1    6400 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 600EEFE1
+P 7200 5000
+F 0 "RV1" H 7130 4954 50  0000 R CNN
+F 1 "R_POT" H 7130 5045 50  0000 R CNN
+F 2 "" H 7200 5000 50  0001 C CNN
+F 3 "~" H 7200 5000 50  0001 C CNN
+	1    7200 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L esp32_devkit_v1_doit:ESP32_DevKit_V1_DOIT U1
+U 1 1 600EF4B8
+P 5200 3700
+F 0 "U1" H 5200 5278 50  0000 C CNN
+F 1 "ESP32_DevKit" H 5200 5187 50  0000 C CNN
+F 2 "ESP32_DevKit_V1_DOIT:esp32_devkit_v1_doit" H 4750 5050 50  0001 C CNN
+F 3 "https://aliexpress.com/item/32864722159.html" H 4750 5050 50  0001 C CNN
+	1    5200 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4500 6200 4500
+Wire Wire Line
+	5800 4600 6100 4600
+Wire Wire Line
+	5800 4200 6100 4200
+Wire Wire Line
+	6100 4200 6100 3800
+Wire Wire Line
+	6100 3800 6300 3800
+Wire Wire Line
+	6100 4600 6100 5000
+Wire Wire Line
+	6100 5000 7050 5000
+Wire Wire Line
+	5200 5100 5200 5300
+Wire Wire Line
+	7650 5300 7650 4150
+Wire Wire Line
+	7650 4150 7000 4150
+Wire Wire Line
+	6300 4150 6300 3900
+Wire Wire Line
+	7200 5150 7200 5300
+Wire Wire Line
+	7200 5300 7650 5300
+Wire Wire Line
+	6600 4500 7000 4500
+Wire Wire Line
+	7000 4500 7000 4150
+Connection ~ 7000 4150
+Wire Wire Line
+	7000 4150 6300 4150
+Wire Wire Line
+	5200 2300 7200 2300
+Wire Wire Line
+	7200 2300 7200 4850
+Connection ~ 7200 5300
+Wire Wire Line
+	5200 5300 7200 5300
+$EndSCHEMATC
