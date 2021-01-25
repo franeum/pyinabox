@@ -13,3 +13,7 @@ micropython object in a box equipped with a esp32 microcontroller
 | POT         | Signal  | 33        |
 | SPEAKER     | +       | 25        |
 | SPEAKER     | -       | GND       |
+
+## Proposals
+
+Insert a piezodisc as _knocker_
