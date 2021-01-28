@@ -8,8 +8,10 @@ from machine import Pin, DAC, Timer
 #for i in range(len(sine)):
 #    sine[i] = 128 + int(127 * math.sin(2 * math.pi * i / len(sine)))
 
-SAMPLERATE = 32000
 
+"""
+SAMPLERATE = 32000
+    
 
 class Player:
     def __init__(self):
@@ -50,3 +52,4 @@ for f in range(100):
     t.init(freq=random.choice(seq), mode=Timer.PERIODIC, callback=play)
     time.sleep(0.1)
 
+"""
