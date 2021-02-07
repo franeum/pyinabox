@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L Device:Speaker LS1
 U 1 1 600EEE8B
-P 6500 3800
-F 0 "LS1" H 6670 3796 50  0000 L CNN
-F 1 "Speaker" H 6670 3705 50  0000 L CNN
-F 2 "" H 6500 3600 50  0001 C CNN
-F 3 "~" H 6490 3750 50  0001 C CNN
-	1    6500 3800
+P 6700 3400
+F 0 "LS1" H 6870 3396 50  0000 L CNN
+F 1 "Speaker" H 6870 3305 50  0000 L CNN
+F 2 "" H 6700 3200 50  0001 C CNN
+F 3 "~" H 6690 3350 50  0001 C CNN
+	1    6700 3400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -65,10 +65,6 @@ Wire Wire Line
 Wire Wire Line
 	5800 4200 6100 4200
 Wire Wire Line
-	6100 4200 6100 3800
-Wire Wire Line
-	6100 3800 6300 3800
-Wire Wire Line
 	6100 4600 6100 5000
 Wire Wire Line
 	6100 5000 7050 5000
@@ -79,8 +75,6 @@ Wire Wire Line
 Wire Wire Line
 	7650 4150 7000 4150
 Wire Wire Line
-	6300 4150 6300 3900
-Wire Wire Line
 	7200 5150 7200 5300
 Wire Wire Line
 	7200 5300 7650 5300
@@ -88,9 +82,6 @@ Wire Wire Line
 	6600 4500 7000 4500
 Wire Wire Line
 	7000 4500 7000 4150
-Connection ~ 7000 4150
-Wire Wire Line
-	7000 4150 6300 4150
 Wire Wire Line
 	5200 2300 7200 2300
 Wire Wire Line
@@ -98,4 +89,26 @@ Wire Wire Line
 Connection ~ 7200 5300
 Wire Wire Line
 	5200 5300 7200 5300
+$Comp
+L Device:CP C1
+U 1 1 602014E6
+P 6250 3400
+F 0 "C1" V 6505 3400 50  0000 C CNN
+F 1 "220uF" V 6414 3400 50  0000 C CNN
+F 2 "" H 6288 3250 50  0001 C CNN
+F 3 "~" H 6250 3400 50  0001 C CNN
+	1    6250 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6400 3400 6500 3400
+Wire Wire Line
+	6100 3400 6100 4200
+Wire Wire Line
+	6500 3500 6450 3500
+Wire Wire Line
+	6450 3500 6450 4150
+Wire Wire Line
+	6450 4150 7000 4150
+Connection ~ 7000 4150
 $EndSCHEMATC
