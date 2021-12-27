@@ -35,6 +35,8 @@ class MainApp(MDApp):
         print(self.theme_cls.font_styles)
 
     def build(self):
+        print(self.theme_cls.__dict__)
+        self.theme_cls.theme_style = "Light"
         screen = Screen()
         Window.size = (800, 600)
         return screen
