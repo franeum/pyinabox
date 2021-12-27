@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import random
+import subprocess
 from pathlib import Path
 from kivy.uix.screenmanager import Screen
 from kivy.app import App
@@ -13,6 +15,7 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.filemanager import MDFileManager
 from kivymd.toast import toast
 
+from kivymd.uix.menu import MDDropdownMenu
 from kivy.core.text import LabelBase
 from kivymd.font_definitions import theme_font_styles
 
@@ -33,6 +36,7 @@ class MainApp(MDApp):
 
     def build(self):
         screen = Screen()
+        Window.size = (800, 600)
         return screen
 
     def file_manager_open(self):
@@ -66,6 +70,27 @@ class MainApp(MDApp):
         p = Path(path)
         return p.resolve().__str__()
 
+    def load_on_device(self):
+        print(self.firmware_path)
+
+    def show_serial_menu(self):
+        menu_items = [
+            {
+                "text": f"Item {i}",
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f"Item {i}": self.menu_callback(x),
+            } for i in range(random.randint(2, 8))
+        ]
+        self.menu = MDDropdownMenu(
+            caller=self.root.ids.serial_port_button,
+            items=menu_items,
+            width_mult=4,
+        )
+
+        self.menu.open()
+
+    def menu_callback(self, text_item):
+        print(text_item)
 
     """
     def events(self, instance, keyboard, keycode, text, modifiers):
